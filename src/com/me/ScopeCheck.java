@@ -32,11 +32,21 @@ public class ScopeCheck {
 
     }
 
+    //step 1 for visibility, method for InnerClass
+    public void useInnerClass(){
+        //step 2 an instance of InnerClass
+        InnerClass innerClass = new InnerClass();
+        System.out.println("varThree from outer class: " + innerClass.varThree);
+
+        //step 3 back to main
+
+    }
+
     //new class, inside class
     public class InnerClass {
 
         //variable
-        public int privateVar = 3; //if this was not here, program would find private int privateVar = 1;
+        public int varThree = 3; //if this was not here, program would find private int privateVar = 1;
 
         //constructor
         public InnerClass() {
